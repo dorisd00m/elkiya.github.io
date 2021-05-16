@@ -22,6 +22,8 @@
     "webpack-livereload-plugin": "^1.2.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.1",
     "external-svg-loader": "^1.2.2",
     "gumshoejs": "^5.1.2",
     "simple-scrollspy": "^2.1.0"

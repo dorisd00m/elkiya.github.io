@@ -5,12 +5,18 @@ body {
 }
 .container {
     max-width: 1300px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 .svg {
     path {
         fill: currentColor;
     }
+}
+.px-65px {
+    padding-left: 65px;
+    padding-right: 65px;
 }
 .header {
     height: 120px;
@@ -19,11 +25,13 @@ body {
     left: 0;
     right: 0;
     @apply transition-all ease-linear;
+   
     &.scrolling {
         position: fixed;
         height: 84px;
         box-shadow: 0px -12px 70px 25px rgba(0, 0, 0, 0.1);
         @apply bg-white;
+        
         + .content .section.hero-1 {
             margin-top: 0;
         }
@@ -37,7 +45,37 @@ body {
                 @apply text-primary;
             }
         }
-        
+        .navbar-toggler {
+            svg {
+                @apply text-primary;
+            }
+        }
+        .navbar-collapse {
+            @media (max-width: 991px) {
+                top: 84px;
+                box-shadow: inset 0px 60px 70px -24px rgba(0, 0, 0, 0.1);
+                @apply bg-white;
+            }
+        }
+        .header-nav,.navbar-nav {
+            a,.nav-link {
+                @media (max-width: 991px) {
+                    padding: 10px 0;
+                    @apply border-b border-primary;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        @media (max-width: 991px) {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            right: 0;
+            padding: 30px 25px;
+            
+            @apply bg-transparent font-normal;
+        }
     }
     .container {
         height: 100%;
@@ -49,11 +87,17 @@ body {
             height: 40px;
         }
     }
-    .header-nav {
+    .header-nav,.navbar-nav {
         gap: 0 60px;
-        a {
+        a,.nav-link {
             font-size: 20px;
             @apply text-white;
+        }
+    }
+    .navbar-toggler {
+        svg {
+            width: 24px;
+            height: 24px;
         }
     }
 }
@@ -123,6 +167,126 @@ body {
                 margin-top: 142px;
             }
         }
+        &.section-second {
+            padding: 63px 0;
+        }
+        &.section-third {
+            padding: 126px 0;
+            .section-1 {
+
+                margin-left: -65px;
+                width: 460px;
+            }
+            .section-image-1 {
+            }
+        }
+        &.section-fourth {
+            padding: 279px 0;
+            position: relative;
+        }
+        &.section-fifth {
+            padding: 188px 0;
+            .nav {
+                .nav-link {
+                    background: transparent;
+                    outline: none;
+                    @apply text-gray-400;
+                    &.active {
+                        @apply text-black font-bold;
+                    }
+                }
+            }
+            .pricing-table {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 62px 35px;
+                border-radius: 30px;
+                position: relative;
+                height: 897px;
+                &.pricing-1 {
+                    background: #345C7C;
+                    overflow: hidden;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 336px;
+                        height: 336px;
+                        left: 282px;
+                        top: -125px;
+                        border-radius: 100%;
+                        background: linear-gradient(145.15deg, #467AA3 16.41%, rgba(52, 92, 124, 0) 89.65%);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 336px;
+                        height: 336px;
+                        left: -149px;
+                        bottom: -197px;
+                        border-radius: 100%;
+
+                        background: linear-gradient(328.91deg, #467AA3 1.27%, rgba(52, 92, 124, 0) 88.61%);
+                    }
+                }
+                &.pricing-2 {
+                    background: #6C5C7A;
+                    overflow: hidden;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 336px;
+                        height: 336px;
+                        left: 282px;
+                        top: -125px;
+                        border-radius: 100%;
+                        background: linear-gradient(145.15deg, #7F6C90 16.41%, rgba(127, 108, 144, 0) 89.65%);
+                    }
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        border-radius: 100%;
+                        width: 557px;
+                        height: 557px;
+                        left: auto;
+                        right: -239px;
+                        bottom: -432px;
+                        background: linear-gradient(132.43deg, #7F6C90 -21.96%, rgba(127, 108, 144, 0) 49.05%);
+                        transform: rotate(90deg);
+                    }
+                }
+                &.pricing-3 {
+                    background: #C06D84;
+                    overflow: hidden;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border-radius: 100%;
+                        width: 494px;
+                        height: 494px;
+                        left: -48px;
+                        top: -150px;
+
+                        background: linear-gradient(209.26deg, #CF768E 22.54%, rgba(207, 118, 142, 0) 88.08%);
+                    }
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        border-radius: 100%;
+                        width: 336px;
+                        height: 336px;
+                        left: 110px;
+                        top: 948.79px;
+
+                        background: linear-gradient(145.15deg, #CF768E 16.41%, rgba(207, 118, 142, 0) 89.65%);
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+        }
         .section-h2 {
             font-size: 48px;
             line-height: 61px;
@@ -133,5 +297,13 @@ body {
             line-height: 32px;
             font-weight: 400;
         }
+        .section-ul {
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: 400;
+        }
     }
+}
+.footer {
+    min-height: 434px;
 }

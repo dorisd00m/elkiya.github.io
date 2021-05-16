@@ -14,9 +14,9 @@ module.exports = {
     //   'hero-h1':['48px','62px'],
     //   'hero-p':['18px','27px'],
     // },
-    padding: {
-      '65px': '65px',
-    },
+    // padding: {
+    //   '65px': '65px',
+    // },
     container: {
      
     },

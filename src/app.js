@@ -1,5 +1,10 @@
 import 'external-svg-loader'
-import scrollSpy from 'simple-scrollspy'
+// import scrollSpy from 'simple-scrollspy'
+// import 'bootstrap'
+// import 'bootstrap/js/dist/tab'
+// import Collapse from 'bootstrap/js/dist/collapse'
+
+// const collapse = new Collapse(document.querySelector('.collapse'))
 // window.onscroll = function() {scrollFunction()};
 
 // function scrollFunction() {
@@ -15,15 +20,8 @@ import scrollSpy from 'simple-scrollspy'
 //     console.log(bodyTop)
 //   }
 // }
-window.onload = function () {
-  scrollSpy('#navbar', {
-    offset: 0, // in pixels
-    menuActiveTarget: '.header-nav > a',
-    sectionClass: '.scrollspy',
-    activeClass: 'active',
-    scrollContainer: ''
-  })
-}
+
+
 window.addEventListener("scroll", function() {
     var header = document.getElementById("navbar")
     header.classList.toggle("scrolling", window.scrollY > 0)

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/app.js":
@@ -7,14 +8,15 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var external_svg_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! external-svg-loader */ "./node_modules/external-svg-loader/svg-loader.js");
 /* harmony import */ var external_svg_loader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(external_svg_loader__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var simple_scrollspy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! simple-scrollspy */ "./node_modules/simple-scrollspy/src/index.js");
-/* harmony import */ var simple_scrollspy__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(simple_scrollspy__WEBPACK_IMPORTED_MODULE_1__);
-
- // window.onscroll = function() {scrollFunction()};
+ // import scrollSpy from 'simple-scrollspy'
+// import 'bootstrap'
+// import 'bootstrap/js/dist/tab'
+// import Collapse from 'bootstrap/js/dist/collapse'
+// const collapse = new Collapse(document.querySelector('.collapse'))
+// window.onscroll = function() {scrollFunction()};
 // function scrollFunction() {
 //    var  bodyTop =  document.body.scrollTop,
 //         docTop = document.documentElement.scrollTop,
@@ -27,17 +29,6 @@ __webpack_require__.r(__webpack_exports__);
 //     console.log(bodyTop)
 //   }
 // }
-
-window.onload = function () {
-  simple_scrollspy__WEBPACK_IMPORTED_MODULE_1___default()('#navbar', {
-    offset: 0,
-    // in pixels
-    menuActiveTarget: '.header-nav > a',
-    sectionClass: '.scrollspy',
-    activeClass: 'active',
-    scrollContainer: ''
-  });
-};
 
 window.addEventListener("scroll", function () {
   var header = document.getElementById("navbar");
@@ -52,7 +43,6 @@ window.addEventListener("scroll", function () {
   \*********************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 let counter = 0;
@@ -79,7 +69,6 @@ module.exports = {
   \***********************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 // Source: https://github.com/thomaspark/scoper
@@ -107,7 +96,6 @@ module.exports = (css, prefix) => {
   \********************************************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-"use strict";
 
 
 const { get, set, del } = __webpack_require__(/*! idb-keyval */ "./node_modules/idb-keyval/dist/idb-keyval.mjs");
@@ -434,7 +422,6 @@ window.addEventListener("DOMContentLoaded", () => {
   \*****************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Store": () => (/* binding */ Store),
@@ -518,126 +505,8 @@ function keys(store = getDefaultStore()) {
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./node_modules/simple-scrollspy/src/index.js":
-/*!****************************************************!*\
-  !*** ./node_modules/simple-scrollspy/src/index.js ***!
-  \****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = (el, options = {}) => {
-  const { ScrollSpy } = __webpack_require__(/*! ./scrollspy */ "./node_modules/simple-scrollspy/src/scrollspy.js")
-  const instance = new ScrollSpy(el, options)
-
-  window.onload = instance.onScroll()
-  window.addEventListener('scroll', () => instance.onScroll())
-
-  return instance
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/simple-scrollspy/src/scrollspy.js":
-/*!********************************************************!*\
-  !*** ./node_modules/simple-scrollspy/src/scrollspy.js ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ScrollSpy": () => (/* binding */ ScrollSpy)
-/* harmony export */ });
-class ScrollSpy {
-  constructor(menu, options = {}) {
-    if (!menu) {
-      throw new Error('First argument is query selector to your navigation.')
-    }
-
-    if (typeof options !== 'object') {
-      throw new Error('Second argument must be instance of Object.')
-    }
-
-    let defaultOptions = {
-      sectionClass: '.scrollspy',
-      menuActiveTarget: 'li > a',
-      offset: 0,
-      hrefAttribute: 'href',
-      activeClass: 'active',
-      scrollContainer: '',
-    }
-
-    this.menuList = menu instanceof HTMLElement ? menu : document.querySelector(menu)
-    this.options = Object.assign({}, defaultOptions, options)
-
-    if(this.options.scrollContainer) {
-      this.scroller = this.options.scrollContainer instanceof HTMLElement ? this.options.scrollContainer : document.querySelector(this.options.scrollContainer)
-    } else {
-      this.scroller = window
-    }
-
-    this.sections = document.querySelectorAll(this.options.sectionClass)
-
-    this.listen()
-  }
-
-  listen() {
-    if (this.scroller) {
-      this.scroller.addEventListener('scroll', () => this.onScroll())
-    }
-  }
-
-  onScroll() {
-    const section = this.getSectionInView()
-    const menuItem = this.getMenuItemBySection(section)
-
-    if (menuItem) {
-      this.removeCurrentActive({ ignore: menuItem })
-      this.setActive(menuItem)
-    }
-  }
-
-  getMenuItemBySection(section) {
-    if (!section) return
-    const sectionId = section.getAttribute('id')
-    return this.menuList.querySelector(`[${this.options.hrefAttribute}="#${sectionId}"]`)
-  }
-
-  getSectionInView() {
-    for (let i = 0; i < this.sections.length; i++) {
-      const startAt = this.sections[i].offsetTop
-      const endAt = startAt + this.sections[i].offsetHeight
-      let currentPosition = (document.documentElement.scrollTop || document.body.scrollTop) + this.options.offset
-
-      if(this.options.scrollContainer && this.scroller) {
-        currentPosition = (this.scroller.scrollTop) + this.options.offset
-      }
-
-      const isInView = currentPosition > startAt && currentPosition <= endAt
-      if (isInView) return this.sections[i]
-    }
-  }
-
-  setActive(activeItem) {
-    const isActive = activeItem.classList.contains(this.options.activeClass)
-    if (!isActive) activeItem.classList.add(this.options.activeClass)
-  }
-
-  removeCurrentActive({ ignore }) {
-    const { hrefAttribute, menuActiveTarget, activeClass } = this.options
-    const items = `${menuActiveTarget}.${activeClass}:not([${hrefAttribute}="${ignore.getAttribute(hrefAttribute)}"])`
-    const menuItems = this.menuList.querySelectorAll(items)
-
-    menuItems.forEach((item) => item.classList.remove(this.options.activeClass))
-  }
-}
 
 
 /***/ })
