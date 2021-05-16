@@ -26,6 +26,7 @@
     "bootstrap": "^5.0.1",
     "external-svg-loader": "^1.2.2",
     "gumshoejs": "^5.1.2",
-    "simple-scrollspy": "^2.1.0"
+    "simple-scrollspy": "^2.1.0",
+    "smooth-scroll": "^16.1.3"
   }
 }

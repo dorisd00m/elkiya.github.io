@@ -1,4 +1,5 @@
 import 'external-svg-loader'
+// import 'smooth-scroll'
 // import scrollSpy from 'simple-scrollspy'
 // import 'bootstrap'
 // import 'bootstrap/js/dist/tab'
