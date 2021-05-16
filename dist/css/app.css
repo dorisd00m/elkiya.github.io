@@ -34466,6 +34466,14 @@ body {
   height: 897px;
 }
 
+.content .section.section-fifth .pricing-table::before, .content .section.section-fifth .pricing-table::after {
+  z-index: 10;
+}
+
+.content .section.section-fifth .pricing-table > * {
+  z-index: 20;
+}
+
 .content .section.section-fifth .pricing-table.pricing-1 {
   background: #345C7C;
   overflow: hidden;
@@ -34569,7 +34577,7 @@ body {
 }
 
 .footer {
-  min-height: 434px;
+  min-height: 334px;
 }
 
 @media (min-width: 640px){
