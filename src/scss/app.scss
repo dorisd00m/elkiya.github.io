@@ -227,16 +227,18 @@ body {
                             opacity: 1;
                         }
                     }
-                    img {
+                    .swiper-container {
                         width: 100%;
                         height: 100%;
                         position: absolute;
                         top: 0;
                         left: 0;
                         right: 0;
-                        object-fit: cover;
                         border-radius: 20px;
-                        z-index: 10;
+                        .swiper-slide {
+                            object-fit: cover;
+                            z-index: 10;
+                        }
                     }
                 }
                 .section-image-caption {
@@ -485,4 +487,9 @@ body {
 }
 .footer {
     min-height: 334px;
+    .footer-nav {
+        @media (min-width: 992px) {
+            display: block !important;
+        }
+    }
 }

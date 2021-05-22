@@ -34541,16 +34541,19 @@ body {
   opacity: 1;
 }
 
-.content .section.section-first .section-1 .section-image img {
+.content .section.section-first .section-1 .section-image .swiper-container {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  border-radius: 20px;
+}
+
+.content .section.section-first .section-1 .section-image .swiper-container .swiper-slide {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
   z-index: 10;
 }
 
@@ -34850,6 +34853,12 @@ body {
 
 .footer {
   min-height: 334px;
+}
+
+@media (min-width: 992px) {
+  .footer .footer-nav {
+    display: block !important;
+  }
 }
 
 @media (min-width: 640px){
