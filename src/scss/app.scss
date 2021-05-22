@@ -76,6 +76,7 @@ body {
             a,.nav-link {
                 @media (max-width: 991px) {
                     padding: 10px 0;
+                    
                     @apply border-b border-primary;
                 }
             }
@@ -113,6 +114,9 @@ body {
             @apply text-white;
             @media (max-width: 1440px) {
                 font-size: 14px;
+            }
+            @media (max-width: 991px) {
+                @apply text-primary;
             }
         }
     }
@@ -322,7 +326,7 @@ body {
             position: relative;
             overflow: hidden;
             @media (max-width: 991px) {
-                padding: 100px 0;
+                padding: 200px 0;
                 height: 900px;
             }
             .section-background {

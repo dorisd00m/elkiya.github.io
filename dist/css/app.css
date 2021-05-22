@@ -34381,6 +34381,13 @@ body {
   }
 }
 
+@media (max-width: 991px) {
+  .header .header-nav a, .header .header-nav .nav-link, .header .navbar-nav a, .header .navbar-nav .nav-link {
+    --tw-text-opacity: 1;
+    color: rgba(52, 92, 124, var(--tw-text-opacity));
+  }
+}
+
 .header .navbar-toggler svg {
   width: 24px;
   height: 24px;
@@ -34657,7 +34664,7 @@ body {
 
 @media (max-width: 991px) {
   .content .section.section-fourth {
-    padding: 100px 0;
+    padding: 200px 0;
     height: 900px;
   }
 }
