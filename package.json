@@ -13,6 +13,7 @@
     "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "file-loader": "^6.2.0",
     "laravel-mix": "^6.0.19",
     "postcss": "^8.2.15",
     "resolve-url-loader": "^3.1.2",
@@ -27,6 +28,7 @@
     "external-svg-loader": "^1.2.2",
     "gumshoejs": "^5.1.2",
     "simple-scrollspy": "^2.1.0",
-    "smooth-scroll": "^16.1.3"
+    "smooth-scroll": "^16.1.3",
+    "swiper": "^6.6.2"
   }
 }

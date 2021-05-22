@@ -1,9 +1,14 @@
 import 'external-svg-loader'
+// import Swiper JS
+
+// import Swiper styles
+
 // import 'smooth-scroll'
 // import scrollSpy from 'simple-scrollspy'
 // import 'bootstrap'
 // import 'bootstrap/js/dist/tab'
 // import Collapse from 'bootstrap/js/dist/collapse'
+
 
 // const collapse = new Collapse(document.querySelector('.collapse'))
 // window.onscroll = function() {scrollFunction()};

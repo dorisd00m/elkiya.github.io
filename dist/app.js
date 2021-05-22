@@ -11,7 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var external_svg_loader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! external-svg-loader */ "./node_modules/external-svg-loader/svg-loader.js");
 /* harmony import */ var external_svg_loader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(external_svg_loader__WEBPACK_IMPORTED_MODULE_0__);
- // import 'smooth-scroll'
+ // import Swiper JS
+// import Swiper styles
+// import 'smooth-scroll'
 // import scrollSpy from 'simple-scrollspy'
 // import 'bootstrap'
 // import 'bootstrap/js/dist/tab'
