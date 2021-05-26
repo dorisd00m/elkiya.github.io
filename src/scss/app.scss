@@ -282,15 +282,33 @@ body {
                 }
             }
             .section-image-1 {
+                width: 203px;
                 @media (max-width: 1280px) {
                     width: 40%;
                 }
                 // @media (max-width: 991px) {
                 //     width: 150px;
                 // }
+                &.swiper-container {
+                    position: relative;
+                    border-radius: 35px;
+                    .swiper-slide {
+                        position: relative;
+                        z-index: 10;
+                    }
+                    .second-section-frame {
+                        position: absolute;
+                        z-index: 20;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
             }
             .section-image-2 {
-                
+                width: 468px;
                 @media (max-width: 1280px) {
                     width: 100%;
                     

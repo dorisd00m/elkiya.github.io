@@ -105,8 +105,27 @@
                                 </p>
                             </div>
                             <div class="section-2 flex items-center justify-end order-1 lg:order-2 mb-20 lg:mb-0">
-                                <img src="./dist/images/HAPE.png" alt="" class="section-image-1 relative self-start my-auto lg:mt-32 -mr-28 lg:-mr-28 xl-mr-36 z-20">
-                                <img src="./dist/images/pic.png" alt="" class="section-image-2 relative z-10 sm:-ml-0 lg:mr-0">
+                                <div class="swiper-container section-second-thumb section-image-1 relative self-start my-auto lg:mt-32 -mr-28 lg:-mr-28 xl-mr-36 z-20">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./dist/images/HAPE.png" alt="" class="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./dist/images/HAPE-1.png" alt="" class="">
+                                        </div>
+                                    </div>
+                                    <img src="./dist/images/phone.png" alt="" class="second-section-frame">
+                                </div>
+                                <div class="swiper-container section-second-slide section-image-2 relative z-10 sm:-ml-0 lg:mr-0">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./dist/images/pic.png" alt="" class="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./dist/images/pic.png" alt="" class="">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -545,6 +564,29 @@
         slidesPerView: 1,
         loop: true,
         autoplay: {delay:3000},        
+    });
+    const tSecond = new Swiper('.section-second-thumb', {
+        // Optional parameters
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 15,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true, 
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+            
+    });
+    const sSecond = new Swiper('.section-second-slide', {
+        // Optional parameters
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 15,
+        
+        thumbs: {
+            swiper: tSecond
+        },
     });
     const pricing1 = new Swiper('.pricing-slide-1', {
         // Optional parameters
