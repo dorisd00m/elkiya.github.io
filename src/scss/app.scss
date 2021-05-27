@@ -396,8 +396,10 @@ body {
                     z-index: 20;
                 }
                 @media (max-width: 991px) {
-                    max-width: 90%;
-                    flex: 0 0 90%;
+                    max-width: 95%;
+                    flex: 0 0 95%;
+                    padding: 30px;
+                    height: auto;
                 }
                 &.pricing-1 {
                     background: #345C7C;

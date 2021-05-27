@@ -34765,8 +34765,10 @@ body {
 
 @media (max-width: 991px) {
   .content .section.section-fifth .pricing-table {
-    max-width: 90%;
-    flex: 0 0 90%;
+    max-width: 95%;
+    flex: 0 0 95%;
+    padding: 30px;
+    height: auto;
   }
 }
 
