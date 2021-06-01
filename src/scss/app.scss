@@ -150,6 +150,8 @@ body {
             min-height: 100vh;
             background: linear-gradient(107.95deg, #345C7C 37.69%, #C06D84 95.53%);
             display: flex;
+            box-shadow: inset -1px -17px 70px -14px rgb(0 0 0 / 45%);
+
             @media (min-width: 1536px) {
                 min-height: auto;
             }
@@ -211,6 +213,7 @@ body {
         &.section-first {
             min-height: 900px;
             padding: 126px 0;
+
             @media (max-width: 991px) {
                 padding: 30px 0;
                 min-height: auto;
