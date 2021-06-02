@@ -522,4 +522,10 @@ body {
             display: block !important;
         }
     }
+    .container {
+        @media (max-width: 991px) {
+            padding-left: 28px;;
+            padding-right: 28px;;
+        }
+    }
 }

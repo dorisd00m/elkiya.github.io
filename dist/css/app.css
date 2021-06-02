@@ -34904,6 +34904,13 @@ body {
   }
 }
 
+@media (max-width: 991px) {
+  .footer .container {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
