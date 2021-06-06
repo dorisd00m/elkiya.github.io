@@ -13,7 +13,10 @@ body {
     @media (max-width: 1440px) {
         max-width: 1200px;
     }
-    @media (max-width:991px) {
+    @media (max-width: 1200px) {
+        max-width: 80%;
+    }
+    @media (max-width:767px) {
         max-width: none;
         
     }
@@ -23,12 +26,12 @@ body {
         fill: currentColor;
     }
 }
-.px-65px {
-    @media (min-width: 1281px) {
-        padding-left: 65px;
-        padding-right: 65px;
-    }
-}
+// .px-65px {
+//     @media (min-width: 1281px) {
+//         padding-left: 65px;
+//         padding-right: 65px;
+//     }
+// }
 .header {
     height: 120px;
     position: absolute;
@@ -151,7 +154,7 @@ body {
             background: linear-gradient(107.95deg, #345C7C 37.69%, #C06D84 95.53%);
             display: flex;
             // box-shadow: inset -1px -17px 70px -14px rgb(0,0,0, .45);
-            box-shadow: inset 0px -20px 20px 3px rgb(0,0,0,.45);
+            box-shadow: inset -1px -8px 20px 3px rgb(0, 0, 0, .45);
             
 
             @media (min-width: 1536px) {
@@ -216,9 +219,17 @@ body {
             min-height: 900px;
             padding: 126px 0;
 
-            @media (max-width: 991px) {
-                padding: 30px 0;
+            @media (max-width: 1200px) {
+                padding: 90px 0;
                 min-height: auto;
+            }
+            @media (max-width: 991px) {
+                padding: 50px 0;
+                
+            }
+            @media (max-width: 767px) {
+                padding: 30px 0;
+                
             }
             .section-1 {
                 position: relative;
@@ -285,7 +296,15 @@ body {
                     width: 100%;
                     
                 }
+                .section-second-thumb {
+                    @media (max-width: 1200px) and (min-width: 992px) {
+                        position: absolute;
+                        margin-right: -5rem;
+                        transform: scale(1.2);
+                    }
+                }
             }
+            
             .section-image-1 {
                 width: 203px;
                 @media (max-width: 1280px) {
@@ -296,7 +315,7 @@ body {
                 // }
                 &.swiper-container {
                     position: relative;
-                    border-radius: 35px;
+                    // border-radius: 35px;
                     .swiper-slide {
                         position: relative;
                         z-index: 10;
@@ -353,8 +372,8 @@ body {
             position: relative;
             overflow: hidden;
             @media (max-width: 991px) {
-                padding: 200px 0;
-                height: 900px;
+                padding: 100px 0 200px 0;
+                height: 500px;
             }
             .section-background {
                 position: absolute;

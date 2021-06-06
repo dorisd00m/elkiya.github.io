@@ -3424,7 +3424,12 @@ body{
     max-width: 1200px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
   .container {
     max-width: none;
   }
@@ -3432,13 +3437,6 @@ body{
 
 .svg path {
   fill: currentColor;
-}
-
-@media (min-width: 1281px) {
-  .px-65px {
-    padding-left: 65px;
-    padding-right: 65px;
-  }
 }
 
 .header {
@@ -3578,7 +3576,7 @@ body{
   min-height: 100vh;
   background: linear-gradient(107.95deg, #345C7C 37.69%, #C06D84 95.53%);
   display: flex;
-  box-shadow: inset 0px -20px 20px 3px rgba(0, 0, 0, 0.45);
+  box-shadow: inset -1px -8px 20px 3px rgba(0, 0, 0, 0.45);
 }
 @media (min-width: 1536px) {
   .content .section.hero {
@@ -3657,10 +3655,20 @@ body{
   min-height: 900px;
   padding: 126px 0;
 }
+@media (max-width: 1200px) {
+  .content .section.section-first {
+    padding: 90px 0;
+    min-height: auto;
+  }
+}
 @media (max-width: 991px) {
   .content .section.section-first {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .content .section.section-first {
     padding: 30px 0;
-    min-height: auto;
   }
 }
 .content .section.section-first .section-1 {
@@ -3737,6 +3745,13 @@ body{
     width: 100%;
   }
 }
+@media (max-width: 1200px) and (min-width: 992px) {
+  .content .section.section-second .section-2 .section-second-thumb {
+    position: absolute;
+    margin-right: -5rem;
+    transform: scale(1.2);
+  }
+}
 .content .section.section-second .section-image-1 {
   width: 203px;
 }
@@ -3747,7 +3762,6 @@ body{
 }
 .content .section.section-second .section-image-1.swiper-container {
   position: relative;
-  border-radius: 35px;
 }
 .content .section.section-second .section-image-1.swiper-container .swiper-slide {
   position: relative;
@@ -3805,8 +3819,8 @@ body{
 }
 @media (max-width: 991px) {
   .content .section.section-fourth {
-    padding: 200px 0;
-    height: 900px;
+    padding: 100px 0 200px 0;
+    height: 500px;
   }
 }
 .content .section.section-fourth .section-background {
@@ -4435,9 +4449,6 @@ body{
   }
 }
 @media (min-width: 1024px){
-  .lg\:-left-16{
-    left: -4rem;
-  }
   .lg\:order-1{
     order: 1;
   }
@@ -4537,6 +4548,13 @@ body{
   }
 }
 @media (min-width: 1280px){
+  .xl\:-left-16{
+    left: -4rem;
+  }
+  .xl\:px-\[65px\]{
+    padding-left: 65px;
+    padding-right: 65px;
+  }
   .xl\:px-10{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
