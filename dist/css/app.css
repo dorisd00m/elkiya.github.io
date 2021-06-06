@@ -3813,13 +3813,13 @@ body{
   }
 }
 .content .section.section-fourth {
-  padding: 85px 0;
+  padding: 279px 0;
   position: relative;
   overflow: hidden;
 }
 @media (max-width: 991px) {
   .content .section.section-fourth {
-    padding: 100px 0 200px 0;
+    padding: 60px 0 200px 0;
     height: 500px;
   }
 }
