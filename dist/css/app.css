@@ -3602,11 +3602,6 @@ body{
     min-height: auto;
   }
 }
-@media (max-width: 767px) {
-  .content .section.hero {
-    height: 765px;
-  }
-}
 .content .section.hero .hero-h1 {
   font-size: 48px;
   line-height: 62px;
