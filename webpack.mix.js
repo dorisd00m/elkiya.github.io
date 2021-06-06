@@ -4,7 +4,7 @@ mix.js('src/app.js', 'dist')
     .sass('src/scss/app.scss','css')
     .options({
         postCss: [
-            require('tailwindcss')
+            require('@tailwindcss/jit')
         ]
     })
     .browserSync({
