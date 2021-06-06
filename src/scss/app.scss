@@ -391,7 +391,7 @@ body {
             }
         }
         &.section-fifth {
-            padding: 188px 0;
+            padding: 50px 0;
             @media (max-width: 991px) {
                 padding: 30px 0;
             }
@@ -413,10 +413,10 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                padding: 62px 35px;
+                padding: 52px 35px;
                 border-radius: 30px;
                 position: relative;
-                height: 897px;
+                height: auto;
                 &::before,&::after {
                     z-index: 10;
                 }
