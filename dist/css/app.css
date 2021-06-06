@@ -4391,6 +4391,10 @@ body{
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  .md\:py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
   .md\:text-center{
     text-align: center;
   }
@@ -4522,6 +4526,10 @@ body{
   .lg\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+  .lg\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
   .lg\:text-left{
     text-align: left;
