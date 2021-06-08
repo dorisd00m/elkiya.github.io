@@ -171,7 +171,7 @@
                 </div>
             </div>
             <div id="pricing">
-                <div class="section section-fifth">
+                <div class="section section-fifth" id="pricing">
                     <div class="container">
                         <ul class="nav nav-pills flex-nowrap justify-center divide-x-2 mb-10 lg:mb-10" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -501,8 +501,8 @@
                         <div class="flex flex-col gap-y-1 lg:mb-0">
                             <h5 class="font-normal lg:font-semibold text-xl mb-2 border-b lg:border-0 py-2 lg:py-0 lg:mb-5 footer-toggle">Pricing</h5>
                             <div class="collapse footer-nav">
-                                <a href="#" class="text-white mb-2 block font-normal no-underline hover:underline">Business Start Up</a>
-                                <a href="#" class="text-white mb-2 block font-normal no-underline hover:underline">Social Media</a>                      
+                                <a href="#pricing" class="text-white mb-2 block font-normal no-underline hover:underline" onclick="tabBtn('#business-tab')">Business Start Up</a>
+                                <a href="#pricing" class="text-white mb-2 block font-normal no-underline hover:underline" onclick="tabBtn('#social-tab')">Social Media</a>                      
                             </div>  
                         </div>
                         <div class="flex flex-col gap-y-1 lg:mb-0">
@@ -549,6 +549,11 @@
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+    function tabBtn(tabs) {
+        var someTabTriggerEl = document.querySelector(tabs)
+        var tab = new bootstrap.Tab(someTabTriggerEl)
+        tab.show()
+    }
     function footerToggle(reso) {
         const footerTgl = document.querySelectorAll('.footer-toggle');
         if(reso.matches) {
